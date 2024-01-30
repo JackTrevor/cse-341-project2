@@ -1,0 +1,37 @@
+// LOCALHOST
+### Get all users
+GET http://localhost:3000/products 
+
+
+### Get user by id
+GET http://localhost:3000/products/65b90012c9d83c062cadff94
+
+### Create user
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+"productName": "product100",
+"brand": "brand1",
+"amount": "10",
+"price": "$10.00"
+}
+
+
+### Put user
+PUT http://localhost:3000/products/65b90012c9d83c062cadff94 HTTP/1.1
+content-type: application/json
+
+{
+    "productName": "product10",
+    "brand": "brand1",
+    "amount": "10",
+    "price": "$10.00"
+}
+
+### DELETE user
+DELETE http://localhost:3000/products/65b95a233e872d08fce0dd65 HTTP/1.1
+
+
+
+
