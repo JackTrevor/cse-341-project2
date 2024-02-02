@@ -1,6 +1,6 @@
 // LOCALHOST
 ### Get all users
-GET http://localhost:3000/products 
+GET http://localhost:3000/people 
 
 
 ### Get user by id
@@ -11,10 +11,10 @@ POST http://localhost:3000/products HTTP/1.1
 content-type: application/json
 
 {
-"productName": "product100",
-"brand": "brand1",
-"amount": "10",
-"price": "$10.00"
+"productName": "product1000",
+"brand": "brand1000",
+"amount": "100",
+"price": "$100.00"
 }
 
 
@@ -23,7 +23,7 @@ PUT http://localhost:3000/products/65b90012c9d83c062cadff94 HTTP/1.1
 content-type: application/json
 
 {
-    "productName": "product10",
+    "productName": "product15",
     "brand": "brand1",
     "amount": "10",
     "price": "$10.00"

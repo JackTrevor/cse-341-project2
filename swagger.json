@@ -1,170 +1,311 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "title": "Users Api",
-    "description": "Users Api",
-    "version": "1.0.0"
-  },
-  "host": "project2-1nmh.onrender.com",
-  "basePath": "/",
-  "schemes": [
-    "https"
-  ],
-  "paths": {
-    "/": {
-      "get": {
-        "tags": [
-          "Hello Jackson"
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
+    "swagger": "2.0",
+    "info": {
+      "title": "Users Api",
+      "description": "Users Api",
+      "version": "1.0.0"
     },
-    "/products/": {
-      "get": {
-        "tags": [
-          "Products"
-        ],
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
+    "host": "project2-1nmh.onrender.com",
+    "basePath": "/",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "tags": [
+            "Hello Jackson"
+          ],
+          "description": "",
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
           }
         }
       },
-      "post": {
-        "tags": [
-          "Products"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "productName": {
-                  "example": "any"
-                },
-                "brand": {
-                  "example": "any"
-                },
-                "amount": {
-                  "example": "any"
-                },
-                "price": {
-                  "example": "any"
+      "/products/": {
+        "get": {
+          "tags": [
+            "Products"
+          ],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Products"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "productName": {
+                    "example": "any"
+                  },
+                  "brand": {
+                    "example": "any"
+                  },
+                  "amount": {
+                    "example": "any"
+                  },
+                  "price": {
+                    "example": "any"
+                  }
                 }
               }
             }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/products/{id}": {
-      "get": {
-        "tags": [
-          "Products"
-        ],
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
+          ],
+          "responses": {
+            "201": {
+              "description": "Created"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
         }
       },
-      "put": {
-        "tags": [
-          "Products"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "productName": {
-                  "example": "any"
-                },
-                "brand": {
-                  "example": "any"
-                },
-                "amount": {
-                  "example": "any"
-                },
-                "price": {
-                  "example": "any"
+      "/products/{id}": {
+        "get": {
+          "tags": [
+            "Products"
+          ],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Products"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "productName": {
+                    "example": "any"
+                  },
+                  "brand": {
+                    "example": "any"
+                  },
+                  "amount": {
+                    "example": "any"
+                  },
+                  "price": {
+                    "example": "any"
+                  }
                 }
               }
             }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+        },
+        "delete": {
+          "tags": [
+            "Products"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },"/people/": {
+        "get": {
+          "tags": [
+            "People"
+          ],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "People"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "example": "any"
+                  },
+                  "lastName": {
+                    "example": "any"
+                  },
+                  "age": {
+                    "example": "any"
+                  },
+                  "salary": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Created"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
         }
       },
-      "delete": {
-        "tags": [
-          "Products"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
+      "/people/{id}": {
+        "get": {
+          "tags": [
+            "People"
+          ],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
           }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+        },
+        "put": {
+          "tags": [
+            "People"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "example": "any"
+                  },
+                  "lastName": {
+                    "example": "any"
+                  },
+                  "age": {
+                    "example": "any"
+                  },
+                  "salary": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "People"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
         }
       }
     }
   }
-}
