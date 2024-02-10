@@ -3,15 +3,14 @@ const router = express.Router();
 
 const peopleController = require('../controllers/people');
 
-router.get('/', peopleController.getAll);
+const { isAuthenticated } = require('../middleware/authenticate');
 
+router.get('/', peopleController.getAll);
 router.get('/:id', peopleController.getSingle);
 
-router.post('/', peopleController.createPerson);
-
-router.put('/:id', peopleController.updatePerson);
-
-router.delete('/:id', peopleController.deletePerson);
+router.post('/', isAuthenticated, peopleController.createPerson);
+router.put('/:id', isAuthenticated, peopleController.updatePerson);
+router.delete('/:id', isAuthenticated, peopleController.deletePerson);
 
 
 module.exports = router;
